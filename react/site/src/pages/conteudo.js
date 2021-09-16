@@ -75,6 +75,7 @@ export default function Index() {
             let x = await api.inserirProdutos(nome,categoria,precoDe,precoPor,avaliacao,estoque,descricao,imagem)
 
             if (!ValidarResposta(x)){
+                loading.current.complete()
                 return  
             }   
 
