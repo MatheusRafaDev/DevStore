@@ -89,6 +89,7 @@ export default function Index() {
             let x = await api.alterarProduto(idAlterado,nome,categoria,precoDe,precoPor,avaliacao,estoque,descricao,imagem)
             
             if (!ValidarResposta(x)){
+                loading.current.complete()
                 return  
             }   
 
